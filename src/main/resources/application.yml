@@ -1,0 +1,21 @@
+server:
+  port: 8761
+spring:
+  profiles:
+    - dev
+  application:
+    name: service-registry
+  cloud:
+    config:
+      uri: http://localhost:8888
+---
+server:
+  port: 9761
+spring:
+  profiles:
+    - test
+  application:
+    name: service-registry
+  cloud:
+    config:
+      uri: http://localhost:9999
