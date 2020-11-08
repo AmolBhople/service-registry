@@ -1,21 +1,27 @@
 server:
   port: 8761
 spring:
-  profiles:
-    - dev
+#  profiles:
+#    - dev
   application:
     name: service-registry
-  cloud:
-    config:
-      uri: http://localhost:8888
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  file:
+    name: E://springbootLogs//service-registry.log
 ---
-server:
-  port: 9761
-spring:
-  profiles:
-    - test
-  application:
-    name: service-registry
-  cloud:
-    config:
-      uri: http://localhost:9999
+#server:
+#  port: 9761
+#spring:
+#  profiles:
+#    - test
+#  application:
+#    name: service-registry
+#  cloud:
+#    config:
+#      uri: http://localhost:9999
