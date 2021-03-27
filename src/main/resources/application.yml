@@ -1,8 +1,6 @@
 server:
   port: 8761
 spring:
-#  profiles:
-#    - dev
   application:
     name: service-registry
 
